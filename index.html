@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catch the ball | Поймай шарик</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+  <div>
+    <div class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a href="https://kritskii-a.github.io/" class="navbar-brand"
+            >Catch the ball | Поймай шарик</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid"></div>
+      <canvas class="canvas" id="canvas"></canvas>
+      <h1 class="score">Score: <span id="result">0</span></h1>
+    </div>
+    <footer class="footer">
+
+      <div class="footer-copyright text-center py-3">© 2020 Kritskii Aleksandr:
+        <a href="https://kritskii-a.github.io/"> kritskii-a.github.io</a>
+      </div>
+    
+    </footer>
+
+    <div class="modal fade" id="modalHello" tabindex="-1" role="dialog" aria-labelledby="modalHello" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLongTitle">Catch the ball</h1>
+          </div>
+          <div class="modal-body">
+            <div><h2>Level:</h2>
+              <select id="level" class="form-control">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+            <div class="modal-footer"><button type="button" onclick="playGameStart(); $('#modalHello').modal('hide')" class="btn btn-primary">Start game</button></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalEndGame" tabindex="-1" role="dialog" aria-labelledby="modalHello" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="exampleModalLongTitle">Game over</h1>
+          </div>
+          <div class="modal-body">
+            <h2>Score: <span id="result-modal">0</span></h2>
+          </div>
+          <div class="modal-footer"><button type="button" onclick="gamePlayAgain();" class="btn btn-primary">Play again</button></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+  <script src="src/index.js"></script>
+</html>
