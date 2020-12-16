@@ -154,7 +154,13 @@ function setMaxScore(score) {
 
 // максимальные очки получить
 function getMaxScore() {
-  return localStorage.getItem("score");
+  let value;
+  if (localStorage.getItem("score")) {
+    value = localStorage.getItem("score");
+  } else {
+    value = 0;
+  }
+  return value;
 }
 
 // меняем максимальное значение
