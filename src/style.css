@@ -8,11 +8,26 @@ canvas {
   background-color: #6c8cd538;
 }
 
+/* Score */
+
 .score {
-  padding-right: 2rem;
-  float: right;
   color: #2a4480;
 }
+
+.score-wrapper {
+  float: right;
+  margin-right: 2rem;
+  padding: 2rem;
+  border-radius: 20%;
+  background-color: #6c8cd585;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+}
+
+/* ./Score */
+
+/* Footer */
 
 .footer {
   position: absolute;
@@ -30,6 +45,10 @@ canvas {
   color: #ffbf40;
 }
 
+/* ./Footer */
+
+/* Navbar */
+
 .navbar.navbar-default {
   background: none;
   z-index: 1;
@@ -44,6 +63,10 @@ canvas {
 .navbar-default .navbar-brand:hover {
   color: #ffbf40;
 }
+
+/* ./Navbar */
+
+/* Modal */
 
 .modal-dialog {
   margin-top: 0;
@@ -61,3 +84,5 @@ canvas {
 .modal.in .modal-dialog {
   transform: translate(0, 0);
 }
+
+/* ./Modal */
