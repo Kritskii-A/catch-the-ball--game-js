@@ -50,10 +50,18 @@ document.getElementById("canvas").addEventListener(
   },
   false
 );
-
-function playGameStart() {
+let level;
+function playGameStart(levelAgain) {
   // получаем выбранный уровень
-  let level = document.getElementById("level").value;
+  if (levelAgain) {
+    level = levelAgain;
+    console.log("true");
+  } else {
+    level = document.getElementById("level").value;
+  }
+
+  console.log(level);
+
   // указываем точки начала
   let x_circle = randomInteger(50, width - 50),
     y_circle = 0;
@@ -88,7 +96,7 @@ function playGameStart() {
       result.textContent = score; // показываем значение во всплывающем окне
 
       clearInterval(playGame); // очищаем поле
-      playGameStart(); // начинаем игру
+      playGameStart(level); // начинаем игру
     } else {
       click_x = 0;
       click_y = 0;
@@ -106,16 +114,19 @@ function playGameStart() {
 
 // игра закончена
 function gameEnd(score) {
+  $("#level-again").val(level);
   resultScore.textContent = score;
   $("#modalEndGame").modal();
 }
 
 // начинаем игру сначала
 function gamePlayAgain() {
+  let levelAgain = document.getElementById("level-again").value;
   score = 0;
   result.textContent = score;
+
   $("#modalEndGame").modal("hide");
-  playGameStart();
+  playGameStart(levelAgain);
 }
 
 $("#modalHello").modal();
