@@ -18,6 +18,8 @@ resultModalScoreMax.textContent = maxScore;
 let height = document.documentElement.clientHeight;
 let width = document.documentElement.clientWidth;
 
+const color = ["#FFAA00", "#006363", "#6A48D7", "#A66F00", "#5CCCCC"];
+
 // определяем для пользователя ширину и высоту, равную экрану пользователя
 canvas.width = width;
 canvas.height = height;
@@ -60,7 +62,10 @@ document.getElementById("canvas").addEventListener(
   false
 );
 
-function playGameStart(levelAgain) {
+function playGameStart(
+  levelAgain,
+  colorActive = color[randomInteger(0, color.length - 1)]
+) {
   // получаем выбранный уровень
   if (levelAgain) {
     level = levelAgain;
@@ -85,7 +90,7 @@ function playGameStart(levelAgain) {
     }
 
     // Рисуем шарик
-    circle(x_circle, y_circle, 25, "#FFAA00");
+    circle(x_circle, y_circle, 25, colorActive);
 
     // Условие для заканчивания игры
     if (
