@@ -11,6 +11,7 @@ let resultScore = document.getElementById("result-modal");
 let resultScoreMax = document.getElementById("result-max");
 let resultModalScoreMax = document.getElementById("result-max-modal");
 resultScoreMax.textContent = getMaxScore();
+
 let maxScore = getMaxScore();
 resultModalScoreMax.textContent = maxScore;
 
