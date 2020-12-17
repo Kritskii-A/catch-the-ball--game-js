@@ -95,11 +95,11 @@ function playGameStart(
 
     // Условие для заканчивания игры
     if (
-      x_circle >= click_x - 30 &&
-      x_circle <= click_x + 30 &&
+      x_circle >= click_x - 26 &&
+      x_circle <= click_x + 26 &&
       click_x > 0 &&
-      y_circle >= click_y - 30 &&
-      y_circle <= click_y + 30 &&
+      y_circle >= click_y - 26 &&
+      y_circle <= click_y + 26 &&
       click_y > 0
     ) {
       click_x = 0;
